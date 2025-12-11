@@ -1,0 +1,12 @@
+enum TokenType {
+    identifier =   0;
+    left_brace =   1;
+    right_brace =  2;
+    equals =       3;
+    int =          4;
+    semi_colon =   5;
+    questionmark = 6;
+    eof =          7;
+}
+
+
