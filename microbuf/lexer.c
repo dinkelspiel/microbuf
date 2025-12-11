@@ -106,6 +106,7 @@ char *token_to_string_map[] = {"identifier",   "left_brace", "right_brace",
                                "questionmark", "eof"};
 
 char *token_to_string(Token *token) { return token_to_string_map[token->type]; }
+char *token_type_to_string(TokenType type) { return token_to_string_map[type]; }
 
 void print_token(Token *token) {
   int map_length = 8;
