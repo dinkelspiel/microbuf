@@ -14,7 +14,7 @@ int main() {
     tmp_token = tmp_token->next;
   }
 
-  parse(token, file->contents);
+  AstNode *ast = parse(token, file->contents);
 
   return 0;
 }

@@ -168,7 +168,7 @@ void print_ast(AstNode *node) {
     print_ast(node->next);
 }
 
-void parse(Token *token, char *source) {
+AstNode *parse(Token *token, char *source) {
   ParserContext *ctx = malloc(sizeof(ParserContext));
   ctx->current_token = token;
   ctx->source = source;
@@ -194,6 +194,8 @@ void parse(Token *token, char *source) {
     }
   }
 
+  AstNode *node = ctx->ast_start;
   print_ast(ctx->ast_start);
   free(ctx);
+  return node;
 }

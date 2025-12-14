@@ -43,7 +43,7 @@ typedef struct {
   AstNode *ast_end;
 } ParserContext;
 
-void parse(Token *token, char *source);
+AstNode *parse(Token *token, char *source);
 void parse_message_item(ParserContext *ctx, AstNode *node);
 
 #endif
